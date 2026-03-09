@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>KidoCode VR (Three.js)</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0f14; }
+      #hint {
+        position: absolute; left: 12px; top: 12px;
+        color: #fff; font-family: system-ui, sans-serif;
+        background: rgba(0,0,0,.35); padding: 10px 12px; border-radius: 12px;
+        max-width: 360px; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hint">
+      <b>KidoCode VR</b><br/>
+      - Apunta con el rayo y aprieta el gatillo para agarrar/soltar.<br/>
+      - Toma bloques del panel derecho y suéltalos en ranuras del programa.<br/>
+      - PROBAR RUTA muestra lo que hace tu secuencia.<br/>
+      - EMPEZAR DE NUEVO limpia todo para volver a intentar.<br/>
+      - Robot celeste = personaje, cristal dorado = objetivo a atrapar.
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
