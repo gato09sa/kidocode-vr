@@ -6,10 +6,17 @@ import { setupXRInput } from "./xr-input.js";
 import { loginAnonymous } from "./firebase.js";
 import { createAnalytics } from "./analytics.js";
 
-const user = await loginAnonymous();
-console.log("Usuario conectado:", user.uid);
-const analytics = createAnalytics(user);
-analytics.startSession();
+let analytics;
+
+async function init() {
+  const user = await loginAnonymous();
+  console.log("Usuario conectado:", user.uid);
+
+  analytics = createAnalytics(user);
+  analytics.startSession();
+}
+
+init();
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
